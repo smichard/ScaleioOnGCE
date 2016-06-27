@@ -5,7 +5,7 @@ This repository contains a set of shell scripts which enable you to set up [EMC 
 Once the ScaleIO source files are downloaded from [emc.com/getscaleio](http://www.emc.com/getscaleio) to your local machine, three CentOS nodes are going to be deployed on GCE. The source files are then uploaded to GCE and executed. At the end you can open the ScaleIO GUI and point it towards the ScaleIO cluster on GCE. With a high speed internet connection this should not take longer than 15 minutes.
 
 ## Prerequisites
-This set of scripts was tested on Ubuntu 14.04 and 16.04:
+This set of scripts was tested on Ubuntu 14.04 and 16.04:  
 1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/downloads) on your machine.
 2. Install the Java Runtime Enviroment on your machine.
 
