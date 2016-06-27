@@ -10,7 +10,7 @@ This set of scripts was tested on Ubuntu 14.04 and 16.04:
 * Install the Java Runtime Enviroment on your machine.
 
 ## Getting Started
-* `git clone https://github.com/smichard/ScaleioOnGCE`
+1. `git clone https://github.com/smichard/ScaleioOnGCE`
 * run the `getSourceFiles.sh` script.  
 This script creates a folder for the source files. The source files are downloaded from [emc.com/getscaleio](https://www.emc.com/getscaleio) to the new folder. The necessary source files are uncompressed and the ScaleIO GUI for Linux is installed.
 * edit the `deployCluster.sh` script before executing (lines 2-4):
