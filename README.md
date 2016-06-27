@@ -6,7 +6,7 @@ Once the ScaleIO source files are downloaded from [emc.com/getscaleio](http://ww
 
 ## Prerequisites
 This set of scripts was tested on Ubuntu 14.04 and 16.04:  
-1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/downloads) on your machine.
+1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/downloads) on your machine.  
 2. Install the Java Runtime Enviroment on your machine.
 
 ## Getting Started
