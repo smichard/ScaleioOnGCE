@@ -21,13 +21,13 @@ gcloud compute --project "YourProjectID" instances create "scaleio3" --zone "eur
 ```
 enter your project ID as indicated above. This script creates three CentOS 7 VM's (machine-type: n1-standard-2, zone: europe-west1, disk-type: pd-ssd) with 205 GB of storage. The VM's are labeled as **scaleio1**, **scaleio2** and **scaleio3**. The use of the `startUpScript.sh` ensures that all necessary packages are installed on each VM. Furthermore this script adds the necessary firewall rules in order to able to connect to the ScaleIO cluster.  
 4. edit the `installScriptNode1.sh`. Change the management IP addresses (`--new_mdm_management_ip`) of the primary and secondary MDM (line 9 and 13) to the public IP addresses of your VM's **sclaeio1** and **scaleio2**:
-``` bash
+```bash
 ...
 scli --create_mdm_cluster --master_mdm_ip 10.132.0.2 --master_mdm_management_ip 104.155.60.64 --master_mdm_name mdm1 --accept_license
 ...
 scli --add_standby_mdm --new_mdm_ip 10.132.0.3 --mdm_role manager --new_mdm_management_ip 104.155.3.69 --new_mdm_name mdm2
 ...
-```
+```  
 5. execute the `copySourceFiles.sh` script. This script copies the necessary source files and the corresponding install scripts to each CentOS VM.
 6. login to each node via `gcloud compute ssh`, and run the according install scripts. Start with **scaleio2** or **scaleio3**, execute the script on **scaleio1** as the last one.
 7. run `runGui.sh` script. This script opens the the ScaleIO GUI. You can point it to the public IP address of your primary MDM (public IP of **scaleio1**). Login with the following credentials:  
