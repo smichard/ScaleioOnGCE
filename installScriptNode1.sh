@@ -14,10 +14,10 @@ scli --add_standby_mdm --new_mdm_ip 10.132.0.3 --mdm_role manager --new_mdm_mana
 scli --add_standby_mdm --new_mdm_ip 10.132.0.4 --mdm_role tb --new_mdm_name tb1
 scli --switch_cluster_mode --cluster_mode 3_node --add_slave_mdm_name mdm2 --add_tb_name tb1
 # Adding Protection Domain and Storage Pool
-scli --add_protection_domain --protection_domain_name pd_system
+scli --mdm_ip 10.132.0.2 --add_protection_domain --protection_domain_name pd_system
 scli --mdm_ip 10.132.0.2 --add_storage_pool --protection_domain_name pd_system --storage_pool_name pool1
 # Adding 3 SDS including 2 device each
-scli --mdm_ip 10.132.0.2 --add_sds --sds_ip 10.132.0.2 --protection_domain_name pd_system --storage_pool_name pool1 --device_path /home/superuser/sio1dev1.io,/home/superuser/sio1dev2.io --device_name sio1dev1,sio1dev2 --sds_name sds1
-scli --mdm_ip 10.132.0.2 --add_sds --sds_ip 10.132.0.3 --protection_domain_name pd_system --storage_pool_name pool1 --device_path /home/superuser/sio2dev1.io,/home/superuser/sio2dev2.io --device_name sio2dev1,sio2dev2 --sds_name sds2
-scli --mdm_ip 10.132.0.2 --add_sds --sds_ip 10.132.0.4 --protection_domain_name pd_system --storage_pool_name pool1 --device_path /home/superuser/sio3dev1.io,/home/superuser/sio3dev2.io --device_name sio3dev1,sio3dev2 --sds_name sds3
+scli --mdm_ip 10.132.0.2 --add_sds_device --sds_ip 10.132.0.2 --protection_domain_name pd_system --storage_pool_name pool1 --device_path /home/superuser/sio1dev1.io,/home/superuser/sio1dev2.io --device_name sio1dev1,sio1dev2 --sds_name sds1
+scli --mdm_ip 10.132.0.2 --add_sds_device --sds_ip 10.132.0.3 --protection_domain_name pd_system --storage_pool_name pool1 --device_path /home/superuser/sio2dev1.io,/home/superuser/sio2dev2.io --device_name sio2dev1,sio2dev2 --sds_name sds2
+scli --mdm_ip 10.132.0.2 --add_sds_device --sds_ip 10.132.0.4 --protection_domain_name pd_system --storage_pool_name pool1 --device_path /home/superuser/sio3dev1.io,/home/superuser/sio3dev2.io --device_name sio3dev1,sio3dev2 --sds_name sds3
 
