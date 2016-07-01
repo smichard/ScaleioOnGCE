@@ -34,3 +34,13 @@ scli --add_standby_mdm --new_mdm_ip 10.132.0.3 --mdm_role manager --new_mdm_mana
 username: admin  
 password: ScaleIO123
 * once you are done exploring the ScaleIO installation. Run the `deleteCluster.sh` script in order to avoid unnecessary costs.
+
+## Vagrant Enviroment
+
+This Vagrant setup will automatically deploy a Ubuntu VM with all necessary software components (gcloud sdk, java 1.8).
+
+To use this, you'll need to complete a few steps:
+* `git clone https://github.com/smichard/ScaleioOnGCE`
+* run `vagrant up` (if you have more than one Vagrant Provider on your machine run `vagrant up --provider virtualbox` instead).
+* to ease authentication with GCE enable X11 forwarding.
+* proceed like outlined above
