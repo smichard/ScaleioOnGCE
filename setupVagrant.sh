@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "Provisioning virtual machine..."
 apt-get update
-echo "Installing git nano unzip"
-apt-get install -y git nano unzip
+echo "Installing git nano unzip firefox"
+apt-get install -y git nano unzip firefox
 echo "Installing java8"
 add-apt-repository ppa:webupd8team/java -y
 apt-get update
